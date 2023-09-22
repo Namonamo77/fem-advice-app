@@ -7,13 +7,13 @@ export default function Advice() {
   return (
     <section className='card'>
         <h1 className='num'>Advice #117</h1>
-        <p>"It is easy to sit up and take notice, what's difficult is getting up and taking action."</p>
+        <p className='advice-text'>"It is easy to sit up and take notice, what's difficult is getting up and taking action."</p>
     <div className='separator'>
         <img src={dividerMobile} alt="divider" />
         
     </div>
     <button>
-        <img src={iconDice} alt="dice icon" />
+        <img className='icon' src={iconDice} alt="dice icon" />
     </button>
     </section>
   )
