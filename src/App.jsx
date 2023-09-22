@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Advice from './Components/Advice'
 
 import './App.css'
 
@@ -20,8 +21,8 @@ useEffect(()=>{
 console.log(advice)
 
   return (
-      <main>
-       
+      <main className='wrapper'>
+        <Advice/>
       </main>
  
   )
