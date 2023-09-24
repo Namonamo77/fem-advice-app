@@ -5,10 +5,14 @@ import './App.css'
 
 function App() {
 const apiURL = "https://api.adviceslip.com/advice"
-const [advice, setAdvice] = useState("")
 
-useEffect(()=>{
 
+const [advice, setAdvice] = useState({
+  id: "99",
+  advice: "Learn from your mistakes."
+})
+
+function clickBtn(){
   fetch(apiURL)
     .then(res => res.json())
     .then(data => {
@@ -17,12 +21,15 @@ useEffect(()=>{
         advice: data.slip.advice
       })
       })
-}, [])
-console.log(advice)
+}
 
   return (
       <main className='wrapper'>
-        <Advice/>
+        <Advice
+          id={advice.id}
+          adviceText={advice.advice}
+          clickBtn={()=>clickBtn()}
+        />
       </main>
  
   )

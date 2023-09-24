@@ -26,8 +26,9 @@
 }
 button {
   position: absolute;
-  left: 42.5%;
-  bottom: -9%;
+  left: 50%;
+  bottom: calc(0 - 50%);
+  transform: translateX(-50%);
   border-radius: 50%;
   padding: .5em;
   width: 70px;
